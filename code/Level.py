@@ -1,22 +1,23 @@
 import pygame
 
 from code.Entity import Entity
+from code.EntityFactory import EntityFactory
 
 
 class Level:
 
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/game_bg.png')
-        self.rect = self.surf.get_rect(left=0, top=0)
         self.entity_list: list[Entity] = []
+        self.entity_list.extend(EntityFactory.get_entity('Level'))
 
-    def run(self, ):
+    def run(self):
         pygame.mixer_music.load('./asset/game_sound.ogg')
         pygame.mixer_music.play(-1)
 
         while True:
-            self.window.blit(source=self.surf, dest=self.rect)
+            for ent in self.entity_list:
+                self.window.blit(source=ent.surf, dest=ent.rect)
             pygame.display.flip()
 
             for event in pygame.event.get():
