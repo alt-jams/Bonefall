@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6142cf-5bd6-4def-aece-43d58da3f3b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/asset/Menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/bone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/bone2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/game_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/game_sound.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/menu_sound.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Const.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Entity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Level.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="36ABqRshzQGhMCZwW210hrRge3a" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,6 +36,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Game.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -69,6 +60,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-PY-252.28238.29" />
         <option value="bundled-python-sdk-a101402ee41c-968fe969f28a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.28238.29" />
       </set>
     </attachedChunks>
@@ -81,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764439708313</updated>
       <workItem from="1764440078312" duration="2015000" />
+      <workItem from="1764444469183" duration="3272000" />
     </task>
     <servers />
   </component>
@@ -99,6 +92,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Bonefall$main.coverage" NAME="main Coverage Results" MODIFIED="1764442350160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bonefall$main.coverage" NAME="main Coverage Results" MODIFIED="1764447849918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bonefall$Game.coverage" NAME="Game Coverage Results" MODIFIED="1764446038097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>
