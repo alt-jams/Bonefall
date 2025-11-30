@@ -53,7 +53,7 @@ class GameOver:
                     if event.key == pygame.K_RETURN: #Enter
                         if option == 0: # salvar score
                             score = Score(self.window)
-                            score.save_score(self.score)
+                            return score.save_score(self.score)
                         if option == 1: # Volta pra tela inicial
                             return 'menu'
 
