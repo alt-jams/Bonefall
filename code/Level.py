@@ -4,7 +4,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import MENU_COLOR, WIN_HEIGHT, BLACK, EVENT_BONE, EVENT_SPEEDUP, LEVEL_COLOR
+from code.Const import WIN_HEIGHT, EVENT_BONE, EVENT_SPEEDUP, LEVEL_COLOR, RED
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.Gameover import GameOver
@@ -66,8 +66,8 @@ class Level:
                     self.show_intro = False
 
             #print text
-            self.level_txt(14, f'Score: {self.score}', BLACK , (10, 4))
-            self.level_txt(14, f'Missed: {self.missed}/5', BLACK , (10, 22))
+            self.level_txt(14, f'Score: {self.score}', RED , (10, 4))
+            self.level_txt(14, f'Perdidos: {self.missed}/5', RED , (10, 22))
             pygame.display.flip()
 
     def level_txt(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):

@@ -23,7 +23,7 @@ class Menu:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(70, "BoneFall", MENU_COLOR, ((WIN_WIDTH / 2), 150), True)
-            self.menu_text(23, "Utilize as setas para controlar o personagem", MENU_COLOR, ((WIN_WIDTH / 2), 400), True)
+            self.menu_text(23, "Utilize as setas e Enter para controlar o jogo", MENU_COLOR, ((WIN_WIDTH / 2), 400), True)
             self.menu_text(20, " <=   =>", MENU_COLOR, ((WIN_WIDTH / 2), 430), True)
 
             for i in range(len(MENU_OPTION)):

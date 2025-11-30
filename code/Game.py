@@ -1,6 +1,6 @@
 import pygame
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION, GAMEOVER_OPTION
+from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.Level import Level
 from code.Menu import Menu
 from code.Score import Score
@@ -11,6 +11,9 @@ class Game:
     def __init__(self):
         pygame.init()
         self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
+        pygame.display.set_caption("Bonefall")
+        icon = pygame.image.load("asset/icon.png").convert_alpha()
+        pygame.display.set_icon(icon)
 
     def run(self):
         while True:

@@ -1,6 +1,5 @@
 import pygame
 
-from code.Const import WIN_WIDTH
 from code.Entity import Entity
 
 
