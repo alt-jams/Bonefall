@@ -7,6 +7,7 @@ from pygame.font import Font
 from code.Const import MENU_COLOR, WIN_HEIGHT, BLACK, EVENT_BONE, EVENT_SPEEDUP, LEVEL_COLOR
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
+from code.Gameover import GameOver
 
 
 class Level:
@@ -18,7 +19,7 @@ class Level:
         self.entity_list.append(EntityFactory.get_entity('Player'))
         self.bone_delay = 2000  # timer inicial
         pygame.time.set_timer(EVENT_BONE, self.bone_delay)
-        pygame.time.set_timer(EVENT_SPEEDUP, 3000)  # a cada 20 seg
+        pygame.time.set_timer(EVENT_SPEEDUP, 2000)  # a cada 20 seg
         self.show_intro = True
         self.intro_start_time = pygame.time.get_ticks()
         self.score = 0
@@ -41,6 +42,11 @@ class Level:
                     if player.rect.colliderect(ent.rect):
                         self.entity_list.remove(ent)
                         self.score += 1
+                    if ent.rect.top > WIN_HEIGHT:  # não pegou o osso
+                        self.entity_list.remove(ent)
+                        self.missed += 1
+                        if self.missed >= 5:
+                            GameOver(self.window, self.entity_list, self.score, self.missed).run()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -48,8 +54,8 @@ class Level:
                 if event.type == EVENT_BONE:
                     self.entity_list.append(EntityFactory.get_entity('Bone'))
                 if event.type == EVENT_SPEEDUP:
-                    if self.bone_delay > 600:  # limite mínimo para não ficar zero
-                        self.bone_delay -= 200
+                    if self.bone_delay > 400:  # limite mínimo para não ficar zero
+                        self.bone_delay -= 100
                         pygame.time.set_timer(EVENT_BONE, self.bone_delay)
                         print(self.bone_delay)
 
@@ -62,7 +68,7 @@ class Level:
 
             #print text
             self.level_txt(14, f'Score: {self.score}', BLACK , (10, 4))
-            self.level_txt(14, f'Missed: {self.missed}', BLACK , (10, 22))
+            self.level_txt(14, f'Missed: {self.missed}/5', BLACK , (10, 22))
             pygame.display.flip()
 
     def level_txt(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):

@@ -23,12 +23,14 @@ class Menu:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(70, "BoneFall", MENU_COLOR, ((WIN_WIDTH / 2), 150), True)
+            self.menu_text(23, "Utilize as setas para controlar o personagem", MENU_COLOR, ((WIN_WIDTH / 2), 400), True)
+            self.menu_text(20, " <=   =>", MENU_COLOR, ((WIN_WIDTH / 2), 430), True)
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(30, MENU_OPTION[i], MENU_COLOR, ((WIN_WIDTH / 2), 430 + 50 * i), bold=True)
+                    self.menu_text(30, MENU_OPTION[i], MENU_COLOR, ((WIN_WIDTH / 2), 500 + 50 * i), bold=True)
                 else:
-                    self.menu_text(30, MENU_OPTION[i], MENU_COLOR, ((WIN_WIDTH / 2), 430 + 50 * i), bold=False)
+                    self.menu_text(30, MENU_OPTION[i], MENU_COLOR, ((WIN_WIDTH / 2), 500 + 50 * i), bold=False)
 
             # Check for all events
             for event in pygame.event.get():
