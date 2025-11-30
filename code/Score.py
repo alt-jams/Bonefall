@@ -47,18 +47,27 @@ class Score:
             pass
 
     def show_score(self):
-        print('show score')
         pygame.mixer_music.load('./asset/menu_sound.mid')
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
 
         while True:
-            self.draw_score('Lucida Sans Typewriter', 30, 'Salvar Score', MENU_COLOR, ((WIN_WIDTH / 2) - 110, 25), True)
+            self.draw_score('Lucida Sans Typewriter', 30, 'TOP 5', MENU_COLOR, ((WIN_WIDTH / 2) - 45, 25), True)
+
+            db_proxy = DBProxy('DBScore')
+            list_score = db_proxy.retrieve_top5()
+            db_proxy.close()
+
+            for i in range(len(list_score)):
+                self.draw_score('Lucida Sans Typewriter', 30, f'{list_score[i][1]} - {list_score[i][2]} - '
+                                                              f'{list_score[i][3]}', MENU_COLOR, (30, 200 + 50 * i), False)
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
+                elif event.type == pygame.KEYDOWN:
+                    return 'menu'
 
             pygame.display.flip()
 
