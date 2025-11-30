@@ -15,6 +15,8 @@ class GameOver:
         self.missed = missed
 
     def run(self):
+        pygame.mixer_music.load('./asset/gameover.mid')
+        pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
 
         overlay = pygame.Surface(self.window.get_size())

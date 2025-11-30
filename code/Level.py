@@ -26,7 +26,7 @@ class Level:
         self.missed = 0
 
     def run(self):
-        pygame.mixer_music.load('./asset/game_sound.ogg')
+        pygame.mixer_music.load('./asset/game_sound2.ogg')
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
 

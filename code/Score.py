@@ -16,7 +16,7 @@ class Score:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def save_score(self, score):
-        pygame.mixer_music.load('./asset/menu_sound.mid')
+        pygame.mixer_music.load('./asset/game_sound.ogg')
         pygame.mixer_music.play(-1)
         db_proxy = DBProxy('DBScore')
         name = ''
@@ -47,7 +47,7 @@ class Score:
             pass
 
     def show_score(self):
-        pygame.mixer_music.load('./asset/menu_sound.mid')
+        pygame.mixer_music.load('./asset/game_sound.ogg')
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
 
