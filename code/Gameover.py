@@ -3,6 +3,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from code.Const import MENU_COLOR, WIN_WIDTH, WIN_HEIGHT, GAMEOVER_OPTION
+from code.Score import Score
 
 
 class GameOver:
@@ -40,12 +41,23 @@ class GameOver:
                 else:
                     self.draw_text('papyrus',30, GAMEOVER_OPTION[i], MENU_COLOR, ((WIN_WIDTH / 2), 500 + 50 * i), bold=False)
 
-            pygame.display.flip()
-
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_UP:
+                        option = 0
+                    if event.key == pygame.K_DOWN:
+                        option = 1
+                    if event.key == pygame.K_RETURN:
+                        if option == 0:
+                            score = Score(self.window)
+                            score.save_score(self.score)
+
+            pygame.display.flip()
+
+
 
 
     def draw_text(self, font_name:str, text_size: int, text: str, text_color: tuple, text_center_pos: tuple, bold: bool):

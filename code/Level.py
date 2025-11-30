@@ -57,7 +57,6 @@ class Level:
                     if self.bone_delay > 400:  # limite mínimo para não ficar zero
                         self.bone_delay -= 100
                         pygame.time.set_timer(EVENT_BONE, self.bone_delay)
-                        print(self.bone_delay)
 
             if self.show_intro:
                 time_passed = pygame.time.get_ticks() - self.intro_start_time
