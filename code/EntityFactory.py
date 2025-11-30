@@ -1,5 +1,9 @@
+import random
+
+from code.Bone import Bone
+from code.Const import WIN_HEIGHT
+from code.Player import Player
 from code.Background import Background
-from code.Entity import Entity
 
 
 class EntityFactory:
@@ -8,8 +12,10 @@ class EntityFactory:
     def get_entity(entity_name: str, position=(0, 0)):
         match entity_name:
             case 'Level':
-                list_bg = []
-                for i in range(1):
-                    list_bg.append(Background('game_bg', (0, 0)))
-                return list_bg
+                return Background('game_bg2', (0, 0))
+            case 'Player':
+                return Player('Player', (10, WIN_HEIGHT - 120))
+            case 'Bone':
+                return Bone('Bone', (random.randint(15, 705), 0))
+        return None
 
