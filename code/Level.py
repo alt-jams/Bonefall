@@ -46,7 +46,7 @@ class Level:
                         self.entity_list.remove(ent)
                         self.missed += 1
                         if self.missed >= 5:
-                            GameOver(self.window, self.entity_list, self.score, self.missed).run()
+                            return GameOver(self.window, self.entity_list, self.score, self.missed).run()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()

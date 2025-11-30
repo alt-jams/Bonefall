@@ -21,6 +21,8 @@ class Game:
             if menu_return == MENU_OPTION[0]:
                 level = Level(self.window)
                 level_return = level.run()
+                if level_return == 'menu':
+                    continue
             elif menu_return == MENU_OPTION[1]:
                 score.show_score()
             elif menu_return == MENU_OPTION[2]:

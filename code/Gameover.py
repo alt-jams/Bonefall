@@ -46,19 +46,18 @@ class GameOver:
                     pygame.quit()
                     quit()
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_UP:
+                    if event.key == pygame.K_UP: # Salvar score
                         option = 0
-                    if event.key == pygame.K_DOWN:
+                    if event.key == pygame.K_DOWN: # menu
                         option = 1
-                    if event.key == pygame.K_RETURN:
-                        if option == 0:
+                    if event.key == pygame.K_RETURN: #Enter
+                        if option == 0: # salvar score
                             score = Score(self.window)
                             score.save_score(self.score)
+                        if option == 1: # Volta pra tela inicial
+                            return 'menu'
 
             pygame.display.flip()
-
-
-
 
     def draw_text(self, font_name:str, text_size: int, text: str, text_color: tuple, text_center_pos: tuple, bold: bool):
         text_font: Font = pygame.font.SysFont(name=font_name, size=text_size, bold=bold)
