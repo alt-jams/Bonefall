@@ -31,9 +31,9 @@ Projeto criado para o componente curricular de Linguagem de Programação Aplica
 
 ### Controles
 
-Seta para a direita → Move o necromante para a direita.
-Seta para a esquerda → Move o necromante para a esquerda.
-Enter → Acessa o menu de opções.
+- Seta para a direita → Move o necromante para a direita.
+- Seta para a esquerda → Move o necromante para a esquerda.
+- Enter → Acessa o menu de opções.
 
 ## ⚙ Como rodar
 
