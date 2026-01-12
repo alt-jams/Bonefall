@@ -52,6 +52,7 @@ pip install -r requirements.txt
 ```
 
 <p align="center">Have fun</p>
+<p align="center">Have fun</p>
 <p align="center">
     💜
 </p>
